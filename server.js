@@ -12,7 +12,7 @@ app.use( cors );
 app.use( express.static( "public" ) );
 app.use( morgan( 'dev' ) );
 
-app.post( '/api/users', jsonParser, ( req, res ) => {
+app.post( '/api/users/register', jsonParser, ( req, res ) => {
     let {firstName, lastName, email, password} = req.body;
 
     if( !firstName || !lastName || !email || !password ){
