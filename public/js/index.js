@@ -24,7 +24,8 @@ function userLoginFetch( email, password ){
             throw new Error( response.statusText );
         })
         .then( responseJSON => {
-            console.log( responseJSON );
+            localStorage.setItem( 'token', responseJSON.token );
+            window.location.href = "/pages/home.html";
         })
         .catch( err => {
             results.innerHTML = `<div> ${err.message} </div>`;
