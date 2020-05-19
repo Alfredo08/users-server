@@ -24,7 +24,7 @@ function userLoginFetch( email, password ){
             throw new Error( response.statusText );
         })
         .then( responseJSON => {
-            console.loog( responseJSON );
+            console.log( responseJSON );
         })
         .catch( err => {
             results.innerHTML = `<div> ${err.message} </div>`;
